@@ -48,6 +48,7 @@ export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
     onSubmit: async (values) => {
       try {
         // Transform form data to match API requirements
+        let payload = {};
         const apiPayload = {
           model_type: modelTypeMapping[values.model] || "random_forest",
           features: {
@@ -60,8 +61,17 @@ export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
           },
         };
 
+        console.log("values.model", values.model);
+        let url = "http://127.0.0.1:8001/ml/predict";
+        if (values.model === "OpenAPI") {
+          url = "http://127.0.0.1:8001/open-ai/predict";
+          payload = { ...apiPayload.features };
+        } else {
+          payload = { ...apiPayload };
+        }
+
         const response = await axios
-          .post("http://127.0.0.1:8001/ml/predict", apiPayload)
+          .post(url, payload)
           .then((data) => {
             return {
               status: true,
