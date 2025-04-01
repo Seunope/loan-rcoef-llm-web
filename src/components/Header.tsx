@@ -1,5 +1,4 @@
-// Header.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export const Header = () => {
@@ -52,7 +51,7 @@ export const Header = () => {
                 />
               </svg>
               <span className="ml-2 text-xl font-bold text-white">
-                Nigeria Loan Predictor
+                R-Factor
               </span>
             </Link>
           </div>
@@ -75,14 +74,14 @@ export const Header = () => {
             >
               Documentation
             </Link>
-            <Link
+            {/* <Link
               to="/models"
               className={`flex items-center h-16 border-b-2 transition-colors duration-200 ${isActivePath(
                 "/models"
               )}`}
             >
               Models
-            </Link>
+            </Link> */}
             <Link
               to="/about"
               className={`flex items-center h-16 border-b-2 transition-colors duration-200 ${isActivePath(

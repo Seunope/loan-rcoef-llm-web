@@ -8,9 +8,7 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h4 className="text-xl font-bold text-white mb-4">
-              Nigeria Loan Prediction
-            </h4>
+            <h4 className="text-xl font-bold text-white mb-4">R-Factor</h4>
             <p className="text-gray-400 mb-4">
               An AI-powered tool to predict loan repayment probability using
               machine learning models trained on Nigerian financial data.
@@ -99,7 +97,8 @@ export const Footer = () => {
           <div>
             <h5 className="text-lg font-semibold text-white mb-4">Contact</h5>
             <ul className="space-y-2">
-              <li className="text-gray-400">info@nigerialoanprediction.com</li>
+              <li className="text-gray-400">aloc.mass@gmail.com</li>
+              <li className="text-gray-400">+234 7055829257</li>
               <li className="text-gray-400">Lagos, Nigeria</li>
               <li>
                 <a
@@ -114,7 +113,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-10 pt-6 border-t border-gray-700 text-center text-gray-500 text-sm">
-          <p>© {currentYear} Nigeria Loan Prediction. All rights reserved.</p>
+          <p>© {currentYear} CentaPoint Solution. All rights reserved.</p>
           <div className="mt-2 space-x-4">
             <a href="#" className="hover:text-purple-300 transition">
               Privacy Policy

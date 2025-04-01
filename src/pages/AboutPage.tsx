@@ -14,11 +14,11 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <p className="text-gray-300">
-              The Nigeria Loan Prediction project aims to democratize access to
-              credit risk assessment tools for Nigerian financial institutions.
-              By providing accurate predictions of loan repayment probability,
-              we help lenders make informed decisions while expanding access to
-              credit for underserved populations.
+              The Loan Repayment Factor(R-Factor) project aims to democratize
+              access to credit risk assessment tools for Nigerian financial
+              institutions. By providing accurate predictions of loan repayment
+              probability, we help lenders make informed decisions while
+              expanding access to credit for underserved populations.
             </p>
           </div>
 
@@ -43,11 +43,12 @@ const AboutPage = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-medium text-white">
-                  Adebayo Ogunlesi
+                  Opeoluwa Mesonrale
                 </h3>
                 <p className="text-purple-300 text-sm">Lead Data Scientist</p>
                 <p className="text-gray-400 mt-2 text-sm">
-                  PhD in Machine Learning with 8 years of experience in fintech.
+                  MIT, UniLag. Machine Learning enthusiast with 3 years of
+                  fintech experience.
                 </p>
               </div>
 

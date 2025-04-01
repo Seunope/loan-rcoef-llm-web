@@ -1,5 +1,3 @@
-import React from "react";
-
 const DocumentationPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -11,11 +9,11 @@ const DocumentationPage = () => {
             <h2 className="text-2xl font-semibold text-purple-300 mb-4">
               Getting Started
             </h2>
-            <p className="text-gray-300">
+            <p className="text-gray-300 ">
               The Nigeria Loan Prediction tool uses machine learning algorithms
               to predict the likelihood of loan repayment based on demographic
-              and financial data. This documentation provides detailed
-              information on how to use the tool effectively.
+              and financial data. This documentation provides simple information
+              on how to use.
             </p>
           </div>
 
@@ -126,6 +124,32 @@ const DocumentationPage = () => {
                     <td className="px-6 py-4 text-sm text-gray-300">
                       Nigerian state of residence
                     </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                      Yes
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                      tenor
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                      Integer
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-300">
+                      Eg 7, 14,30, 60, 120 days
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                      Yes
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                      loanAmount
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                      Integer
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-300">200,000</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
                       Yes
                     </td>

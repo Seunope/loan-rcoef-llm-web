@@ -19,5 +19,14 @@ export interface TableData {
   hit: string;
   error: string;
   rmse: string;
-  dataset: string;
+  category: string;
+}
+
+export interface ResponseData {
+  userData: FormData;
+  prediction: {
+    repaymentCoefficient: string;
+    meta: string;
+    message: string;
+  };
 }
