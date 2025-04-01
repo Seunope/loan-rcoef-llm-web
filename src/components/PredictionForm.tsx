@@ -18,6 +18,7 @@ const modelTypeMapping = {
   Llama: "llama",
   NeuralNetwork: "neural_network",
 };
+const BASE_URL = import.meta.env.VITE_API_URL; // 'http://localhost:8001'; //
 
 export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
   const validationSchema = Yup.object({
@@ -62,9 +63,9 @@ export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
         };
 
         console.log("values.model", values.model);
-        let url = "http://127.0.0.1:8001/ml/predict";
+        let url = BASE_URL + "/ml/predict";
         if (values.model === "OpenAPI") {
-          url = "http://127.0.0.1:8001/open-ai/predict";
+          url = BASE_URL + "/open-ai/predict";
           payload = { ...apiPayload.features };
         } else {
           payload = { ...apiPayload };
