@@ -4,7 +4,7 @@ interface TableProps {
   data: TableData[];
 }
 
-export function Table({ data }: TableProps): JSX.Element {
+export function Table({ data }: TableProps) {
   // Column headers
   const headers: string[] = [
     "Model Type",

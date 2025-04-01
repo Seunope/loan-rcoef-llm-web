@@ -1,7 +1,14 @@
 import * as Yup from "yup";
 import axios from "axios";
 import { useFormik } from "formik";
-import { ResponseData } from "../types";
+import {
+  MaritalStatus,
+  ModelType,
+  ModelType2,
+  ResponseData,
+  Sex,
+  State,
+} from "../types";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 
@@ -20,7 +27,7 @@ const modelTypeMapping = {
 };
 const BASE_URL = import.meta.env.VITE_API_URL; // 'http://localhost:8001'; //
 
-export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
+export function PredictionForm({ onSubmit }: PredictionFormProps) {
   const validationSchema = Yup.object({
     model: Yup.string().required("Model is required"),
     age: Yup.number()
@@ -39,11 +46,11 @@ export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
     initialValues: {
       model: "RandomForest",
       age: 22,
-      sex: "Male",
-      state: "Lagos",
+      sex: "Male" as Sex,
+      state: "Lagos" as State,
       loanAmount: 50000,
       tenor: 14,
-      maritalStatus: "Single",
+      maritalStatus: "Single" as MaritalStatus,
     },
     validationSchema,
     onSubmit: async (values) => {
@@ -51,7 +58,9 @@ export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
         // Transform form data to match API requirements
         let payload = {};
         const apiPayload = {
-          model_type: modelTypeMapping[values.model] || "random_forest",
+          model_type:
+            modelTypeMapping[values.model as keyof typeof modelTypeMapping] ||
+            "random_forest",
           features: {
             gender: values.sex.toLowerCase(),
             maritalStatus: values.maritalStatus,
@@ -100,7 +109,10 @@ export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
         toast.success(response.message);
 
         const results = {
-          userData: values,
+          userData: {
+            ...values,
+            model: values.model as ModelType | ModelType2, // Ensure correct type
+          },
           prediction: response.data,
         };
 
@@ -217,11 +229,43 @@ export function PredictionForm({ onSubmit }: PredictionFormProps): JSX.Element {
                 : "border-gray-600"
             }`}
           >
-            <option value="Lagos">Lagos</option>
-            <option value="Abuja">Abuja</option>
-            <option value="Kano">Kano</option>
-            <option value="Rivers">Rivers</option>
+            <option value="Abia">Abia</option>
+            <option value="Adamawa">Adamawa</option>
+            <option value="Akwa Ibom">Akwa Ibom</option>
+            <option value="Anambra">Anambra</option>
+            <option value="Bauchi">Bauchi</option>
+            <option value="Bayelsa">Bayelsa</option>
+            <option value="Benue">Benue</option>
+            <option value="Borno">Borno</option>
+            <option value="Cross River">Cross River</option>
+            <option value="Delta">Delta</option>
+            <option value="Ebonyi">Ebonyi</option>
+            <option value="Edo">Edo</option>
+            <option value="Ekiti">Ekiti</option>
             <option value="Enugu">Enugu</option>
+            <option value="FCT">Federal Capital Territory (Abuja)</option>
+            <option value="Gombe">Gombe</option>
+            <option value="Imo">Imo</option>
+            <option value="Jigawa">Jigawa</option>
+            <option value="Kaduna">Kaduna</option>
+            <option value="Kano">Kano</option>
+            <option value="Katsina">Katsina</option>
+            <option value="Kebbi">Kebbi</option>
+            <option value="Kogi">Kogi</option>
+            <option value="Kwara">Kwara</option>
+            <option value="Lagos">Lagos</option>
+            <option value="Nasarawa">Nasarawa</option>
+            <option value="Niger">Niger</option>
+            <option value="Ogun">Ogun</option>
+            <option value="Ondo">Ondo</option>
+            <option value="Osun">Osun</option>
+            <option value="Oyo">Oyo</option>
+            <option value="Plateau">Plateau</option>
+            <option value="Rivers">Rivers</option>
+            <option value="Sokoto">Sokoto</option>
+            <option value="Taraba">Taraba</option>
+            <option value="Yobe">Yobe</option>
+            <option value="Zamfara">Zamfara</option>
           </select>
           {formik.touched.state && formik.errors.state ? (
             <div className="text-red-500 text-xs mt-1">

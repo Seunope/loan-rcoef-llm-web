@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Table } from "../components/Table";
-import { TableData, ResponseData, FormData } from "../types";
+import { TableData, ResponseData } from "../types";
 import { HeroSection } from "../components/HeroSection";
 import { PredictionForm } from "../components/PredictionForm";
 import { SourceCodeSection } from "../components/SourceCode";

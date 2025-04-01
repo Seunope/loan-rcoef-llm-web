@@ -1,4 +1,4 @@
-export function HeroSection(): JSX.Element {
+export function HeroSection() {
   return (
     <div className="text-center py-12">
       <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400 mb-4">
