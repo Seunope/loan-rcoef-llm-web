@@ -76,6 +76,9 @@ export function PredictionForm({ onSubmit }: PredictionFormProps) {
         if (values.model === "OpenAPI") {
           url = BASE_URL + "/open-ai/predict";
           payload = { ...apiPayload.features };
+        } else if (values.model === "Llama") {
+          url = BASE_URL + "/llama/predict";
+          payload = { ...apiPayload.features };
         } else {
           payload = { ...apiPayload };
         }
@@ -148,7 +151,7 @@ export function PredictionForm({ onSubmit }: PredictionFormProps) {
             <option value="LinearRegression">Linear Regression</option>
             <option value="NeuralNetwork">Neural Network</option>
             <option value="OpenAPI">OpenAPI</option>
-            <option value="Meta/Llama">Llama</option>
+            <option value="Llama">Meta/Llama</option>
           </select>
           {formik.touched.model && formik.errors.model ? (
             <div className="text-red-500 text-xs mt-1">
