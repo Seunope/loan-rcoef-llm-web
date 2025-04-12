@@ -51,7 +51,7 @@ export const Header = () => {
                 />
               </svg>
               <span className="ml-2 text-xl font-bold text-white">
-                R-Factor
+                LoanAnalyzer
               </span>
             </Link>
           </div>

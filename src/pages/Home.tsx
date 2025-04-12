@@ -3,7 +3,7 @@ import { Table } from "../components/Table";
 import { TableData, ResponseData } from "../types";
 import { HeroSection } from "../components/HeroSection";
 import { PredictionForm } from "../components/PredictionForm";
-import { SourceCodeSection } from "../components/SourceCode";
+// import { SourceCodeSection } from "../components/SourceCode";
 
 const HomePage = () => {
   // Sample data for the table
@@ -76,7 +76,13 @@ const HomePage = () => {
     `;
 
     // Format the output
-    const outputText = `${data.prediction.meta}.\n\nInput data:${dataStr}\n\nPrediction Result: ${data.prediction.repaymentCoefficient} \n\n ${data.prediction.message}`;
+    const outputText = `Input data:${dataStr}\n\nRepayment Probability Score: ${
+      data.prediction.repaymentProbabilityScore
+    } \n\n ${data.prediction.message}\n\n RiskLevel: ${
+      data.prediction.riskLevel ? data.prediction.riskLevel : "---"
+    } \n\n\n Recommendation: ${
+      data.prediction.recommendation ? data.prediction?.recommendation : "---"
+    }`;
 
     setPredictionResult(outputText);
     setIsModalOpen(true);
@@ -95,9 +101,12 @@ const HomePage = () => {
           <div className="p-8 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
             <h3 className="text-2xl font-bold mb-4">Predict Loan Repayment</h3>
             <p className="text-purple-200 mb-6">
-              Our AI model analyzes Nigerian loan data to predict repayment
-              probability. Enter your details to get started.
+              Our AI model analyzes Nigerian loan data and predict repayment
+              probability and give risk assessment. Enter your details to get
+              started.
             </p>
+
+            <p>Risk Assessment | Repayment Probability Score</p>
             <div className="hidden md:block">
               <div className="mt-8 bg-gray-800/30 p-4 rounded-lg backdrop-blur-sm border border-purple-800/50">
                 <p className="font-medium text-white">
@@ -195,7 +204,7 @@ const HomePage = () => {
       </div>
 
       {/* Source Code Section */}
-      <SourceCodeSection />
+      {/* <SourceCodeSection /> */}
     </div>
   );
 };

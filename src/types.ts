@@ -36,8 +36,10 @@ export interface TableData {
 export interface ResponseData {
   userData: FormData;
   prediction: {
-    repaymentCoefficient: string;
     meta: string;
     message: string;
+    riskLevel: string;
+    recommendation: string;
+    repaymentProbabilityScore: number;
   };
 }

@@ -6,10 +6,11 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h4 className="text-xl font-bold text-white mb-4">R-Factor</h4>
+            <h4 className="text-xl font-bold text-white mb-4">LoanAnalyzer</h4>
             <p className="text-gray-400 mb-4">
-              An AI-powered tool to predict loan repayment probability using
-              machine learning models trained on Nigerian financial data.
+              An AI-powered tool to predict loan repayment probability and give
+              risk assessment using machine learning models trained on Nigerian
+              financial data.
             </p>
             <div className="flex space-x-4">
               <a
