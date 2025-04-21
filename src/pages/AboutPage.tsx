@@ -65,9 +65,7 @@ const AboutPage = () => {
                     ></path>
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-white">
-                  Chiamaka Nweze
-                </h3>
+                <h3 className="text-lg font-medium text-white">Deep Seek</h3>
                 <p className="text-purple-300 text-sm">Frontend Developer</p>
                 <p className="text-gray-400 mt-2 text-sm">
                   React specialist with experience building financial
@@ -91,11 +89,11 @@ const AboutPage = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-medium text-white">
-                  Oluwaseun Adeleke
+                  Claude Anthropic
                 </h3>
                 <p className="text-purple-300 text-sm">Backend Engineer</p>
                 <p className="text-gray-400 mt-2 text-sm">
-                  API architect specializing in secure financial systems.
+                  API architect specializing in secure systems.
                 </p>
               </div>
             </div>

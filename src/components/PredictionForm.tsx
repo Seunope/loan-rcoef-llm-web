@@ -19,10 +19,10 @@ interface PredictionFormProps {
 const tenorOptions = [7, 14, 21, 30, 60, 90, 120, 180, 210, 240];
 
 const modelTypeMapping = {
-  RandomForest: "random_forest",
-  LinearRegression: "linear_regression",
   OpenAPI: "open_ai",
   Llama: "llama",
+  RandomForest: "random_forest",
+  LinearRegression: "linear_regression",
   NeuralNetwork: "neural_network",
 };
 const BASE_URL = import.meta.env.VITE_API_URL; // 'http://localhost:8001'; //
@@ -147,11 +147,11 @@ export function PredictionForm({ onSubmit }: PredictionFormProps) {
                 : "border-gray-600"
             }`}
           >
+            <option value="OpenAPI">OpenAPI</option>
+            <option value="Llama">Meta/Llama</option>
             <option value="RandomForesT">Random Forest</option>
             <option value="LinearRegression">Linear Regression</option>
             <option value="NeuralNetwork">Neural Network</option>
-            <option value="OpenAPI">OpenAPI</option>
-            <option value="Llama">Meta/Llama</option>
           </select>
           {formik.touched.model && formik.errors.model ? (
             <div className="text-red-500 text-xs mt-1">

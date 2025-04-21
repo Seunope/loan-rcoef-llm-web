@@ -39,8 +39,8 @@ const HomePage = () => {
     {
       modelType: "OpenAI FineTune",
       hit: "40.9",
-      error: "0.05",
-      rmse: "3.46",
+      error: "37.93",
+      rmse: "2.48",
       category: "LLM",
     },
     {
@@ -52,9 +52,9 @@ const HomePage = () => {
     },
     {
       modelType: "Meta-Llama-3.1-8B FineTune",
-      hit: "60.9",
-      error: "36.88",
-      rmse: "2.71",
+      hit: "36.4",
+      error: "41.0",
+      rmse: "1.97",
       category: "LLM",
     },
   ];
