@@ -8,7 +8,7 @@ export function HeroSection() {
         Trained on 35,000+ Nigerian loans, for smarter insights.
       </h2>
       <p className="text-xl font-bold text-gray-100 mb-3">
-        🚀 Up to 60% Accuracy
+        🚀 Up to 40% Accuracy
       </p>
       <p>🔍 Predict repayment likelihood & give risk assessment instantly</p>
       <h3 className="text-xl font-medium text-gray-400">Try it for free</h3>

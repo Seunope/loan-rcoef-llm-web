@@ -30,7 +30,7 @@ const DocumentationPage = () => {
             <div className="bg-gray-900 p-4 rounded-lg border border-gray-700 font-mono text-sm">
               <p className="text-green-400 mb-2">// Example API request</p>
               <p className="text-gray-300">
-                POST https://api.nigerialoanprediction.com/predict
+                POST https://api.example.com/predict
               </p>
               <p className="text-gray-300 mt-2">
                 {"{"} <br />
