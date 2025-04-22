@@ -113,9 +113,7 @@ const HomePage = () => {
                   "This tool can help reduce default rates by 35% in lending
                   portfolio."
                 </p>
-                <p className="mt-2 text-purple-300">
-                  — Adebayo J., Microfinance Manager
-                </p>
+                <p className="mt-2 text-purple-300">— Kingsley C.,</p>
               </div>
             </div>
           </div>
