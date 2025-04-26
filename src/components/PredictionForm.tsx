@@ -44,7 +44,7 @@ export function PredictionForm({ onSubmit }: PredictionFormProps) {
 
   const formik = useFormik({
     initialValues: {
-      model: "RandomForest",
+      model: "OpenAPI",
       age: 22,
       sex: "Male" as Sex,
       state: "Lagos" as State,
@@ -56,6 +56,7 @@ export function PredictionForm({ onSubmit }: PredictionFormProps) {
     onSubmit: async (values) => {
       try {
         // Transform form data to match API requirements
+        console.log("values", values);
         let payload = {};
         const apiPayload = {
           model_type:
@@ -86,6 +87,7 @@ export function PredictionForm({ onSubmit }: PredictionFormProps) {
         const response = await axios
           .post(url, payload)
           .then((data) => {
+            console.log("SSSSS", data.data);
             return {
               status: true,
               data: data.data.prediction,

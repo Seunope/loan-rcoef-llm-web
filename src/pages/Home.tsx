@@ -75,6 +75,7 @@ const HomePage = () => {
     Marital Status: ${data.userData.maritalStatus}
     `;
 
+    console.log("data.prediction.recommendation", data.prediction);
     // Format the output
     const outputText = `Input data:${dataStr}\n\nRepayment Probability Score: ${
       data.prediction.repaymentProbabilityScore
